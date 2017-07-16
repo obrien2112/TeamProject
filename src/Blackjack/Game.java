@@ -12,11 +12,7 @@ package Blackjack;
 public class Game {
     
     public static void main(String[] args) {
-        
         System.out.println("Let's play a game of Blackjack! ");
-        //System.out.println(Deck.deck[0].getCardToString());
-        
-        //Player.hand[0].getCardToString();
-        
+        //System.out.println(Dealer.player.hand[0].getValue());
     }
 }

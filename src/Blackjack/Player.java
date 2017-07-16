@@ -11,9 +11,9 @@ package Blackjack;
  */
 public class Player {
     
-    static int index = 0;
+    int index = 0;
     Card [] hand = new Card [15];
-    static Card HoleCard;
+  
     
     // Player has a hand
     // Player can hit

@@ -11,9 +11,7 @@ package Blackjack;
  */
 public class Dealer extends Player {
     
-    static int index = 0;
-    Card [] hand = new Card [15];
-    static Card HoleCard;
+    Card holeCard;
     
     // Dealer extends Player
     // Dealer deals cards to Player and Dealer by calling deck.dealCard
@@ -36,12 +34,15 @@ public class Dealer extends Player {
         // Set the game
         player.hand[0] = deck.dealCard();
         dealer.hand[0] = deck.dealCard();
+        dealer.holeCard = dealer.hand[0];
         player.hand[1] = deck.dealCard();
         dealer.hand[1] = deck.dealCard();
         System.out.println(player.hand[0].getCardToString());
         System.out.println(player.hand[1].getCardToString());
         System.out.println(dealer.hand[0].getCardToString());
         System.out.println(dealer.hand[1].getCardToString());
+        System.out.println(dealer.hand[0].getSoftPtValue());
+        System.out.println(dealer.hand.length);
     }
 
 }
