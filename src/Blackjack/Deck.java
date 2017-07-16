@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class Deck {
     int topCard = 0;
-    static Card [] deck = new Card [52];
+    Card [] deck = new Card [52];
     
     public static void main(String[] args) {
         /*
@@ -33,7 +33,7 @@ public class Deck {
         */            
     }
     
-    public static void shuffleDeck(){
+    public void shuffleDeck(){
         Random rand = new Random();
         for (int i = deck.length - 1; i > 0; i--) {
             int index = rand.nextInt(i+1);
@@ -44,7 +44,7 @@ public class Deck {
         }    
     }
     
-    public static int cardsRemaining(){
+    public int cardsRemaining(){
         int counter = 0;
         for (int x = 0; x < deck.length; x++ ){
             if (deck[x] != null)

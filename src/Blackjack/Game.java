@@ -10,12 +10,9 @@ package Blackjack;
  * @author Michael
  */
 public class Game {
-    static Player player;
-    static Dealer dealer;
     
     public static void main(String[] args) {
-        dealer = new Dealer();
-        player = new Player();
+        
         System.out.println("Let's play a game of Blackjack! ");
         //System.out.println(Deck.deck[0].getCardToString());
         

@@ -12,7 +12,7 @@ package Blackjack;
 public class Dealer extends Player {
     
     static int index = 0;
-    static Card [] hand = new Card [15];
+    Card [] hand = new Card [15];
     static Card HoleCard;
     
     // Dealer extends Player
@@ -22,26 +22,26 @@ public class Dealer extends Player {
     
     public static void main(String[] args) {
     
+        // Create a dealer and player
+        Player player = new Player();
+        Dealer dealer = new Dealer();
         
         // Create a deck for blackjack
         Deck deck = new Deck();
+        
         
         // Shuffle the deck before the game
         deck.shuffleDeck(); // add shuffle sound
         
         // Set the game
-        Game.player.hand[0] = deck.dealCard();
-        Game.dealer.hand[0] = deck.dealCard();
-        Game.player.hand[1] = deck.dealCard();
-        Game.dealer.hand[1] = deck.dealCard();
-        System.out.println(Game.player.hand[0].getCardToString());
-        System.out.println(Game.player.hand[1].getCardToString());
-        System.out.println(Game.dealer.hand[0].getCardToString());
-        System.out.println(Game.dealer.hand[1].getCardToString());
+        player.hand[0] = deck.dealCard();
+        dealer.hand[0] = deck.dealCard();
+        player.hand[1] = deck.dealCard();
+        dealer.hand[1] = deck.dealCard();
+        System.out.println(player.hand[0].getCardToString());
+        System.out.println(player.hand[1].getCardToString());
+        System.out.println(dealer.hand[0].getCardToString());
+        System.out.println(dealer.hand[1].getCardToString());
     }
-    
 
-    
-    
-    
 }

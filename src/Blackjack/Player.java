@@ -12,7 +12,7 @@ package Blackjack;
 public class Player {
     
     static int index = 0;
-    static Card [] hand = new Card [15];
+    Card [] hand = new Card [15];
     static Card HoleCard;
     
     // Player has a hand
@@ -21,8 +21,6 @@ public class Player {
     // One hole card is face down;
     // Player can bust
 
-    
-    
 }
 
 
