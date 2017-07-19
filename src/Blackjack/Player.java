@@ -11,16 +11,22 @@ package Blackjack;
  */
 public class Player {
     
-    int index = 0;
+    int index = 2;
     Card [] hand = new Card [15];
   
     
     // Player has a hand
     // Player can hit
     // Player can stay
-    // One hole card is face down;
     // Player can bust
 
+    public int getHandValue(){
+        int handValue = 0;
+        for (int x = 0; x < index; x++)
+            handValue += hand[x].getHardPtValue();
+        return handValue;
+    }
+    
 }
 
 
