@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Blackjack;
+import java.util.Scanner;
 
 /**
  * @version 1.0.0.0
@@ -22,6 +23,8 @@ public class Dealer extends Player {
     
     public static void main(String[] args) {
     
+        Scanner input = new Scanner (System.in);
+        
         // Create a new game
         Game game = new Game();
         
@@ -48,12 +51,21 @@ public class Dealer extends Player {
         System.out.println(dealer.hand[1].getCardToString());
         System.out.println(game.getHandValue(player));
         System.out.println(game.getHandValue(dealer));
-        hitPlayer(player);
-        hitPlayer(dealer);
-        System.out.println(player.hand[2].getCardToString());
-        System.out.println(dealer.hand[2].getCardToString());
-        System.out.println(game.getHandValue(player));
-        System.out.println(game.getHandValue(dealer));
+        char choice;
+        
+        do {
+        System.out.println("Does player want to hit? ");
+        choice = input.next().charAt(0);
+        
+        
+        if (choice == 'y' || choice == 'Y'){
+            hitPlayer(player);
+            System.out.println("Player hit with " + player.hand[player.index-1].getCardToString());
+            System.out.println(game.getHandValue(player));
+        }} while (choice == 'y' || choice == 'Y' );
+        
+        //hitPlayer(dealer);
+        
     }
 
     public static void hitPlayer(Player player){
